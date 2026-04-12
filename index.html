@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wong Electric Inc. | Wong Électrique Inc. | 宏電工程</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Wong Electric Inc. is a licensed electrical contractor (RBQ: 5867-2353-01) serving Montreal. Specialized in commercial and industrial projects. Member of CMEQ.">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="logo-WongElectric.png" alt="Wong Electric Logo" id="main-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#welcome" data-i18n="nav_welcome">Welcome</a></li>
+                <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+                <li><a href="#careers" data-i18n="nav_careers">Careers</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact Us</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button onclick="setLanguage('e')" id="lang-e">EN</button>
+                <button onclick="setLanguage('f')" id="lang-f">FR</button>
+                <button onclick="setLanguage('c')" id="lang-c">ZH</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section id="welcome" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 data-i18n="hero_title">Excellence in Electrical Solutions</h1>
+                    <p data-i18n="hero_subtitle">Licensed Electrical Contractor serving Montreal and surrounding areas. RBQ: 5867-2353-01</p>
+                    <div class="cta-group">
+                        <a href="#contact" class="btn primary" data-i18n="nav_contact">Contact Us</a>
+                        <a href="#projects" class="btn secondary" data-i18n="nav_projects">Our Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section bg-light">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <h2 data-i18n="about_title">About Wong Electric Inc.</h2>
+                    <p data-i18n="about_desc">Wong Electric Inc. is a premier electrical contractor based in Montreal. As a proud member of CMEQ and a holder of RBQ license 5867-2353-01, we specialize in commercial and industrial electrical work.</p>
+                    <div class="badges">
+                        <img src="Logo-RBQ.png" alt="RBQ License" class="badge">
+                        <img src="logo-CMEQ.webp" alt="CMEQ Member" class="badge">
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                         <!-- Content generated placeholder or real image if exists -->
+                         <div class="placeholder-graphic">
+                            <div class="bolt">⚡</div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section id="careers" class="section">
+            <div class="container text-center">
+                <h2 data-i18n="careers_title">Join Our Team</h2>
+                <p class="max-600" data-i18n="careers_desc">We are always looking for talented electricians and apprentices. Check back soon for specific job postings!</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-dark">
+            <div class="container">
+                <h2 data-i18n="projects_title" class="text-white">Our Work Portfolio</h2>
+                <p data-i18n="projects_desc" class="text-white opacity-70">Showcasing our recent commercial and residential achievements.</p>
+                <div class="project-grid">
+                    <!-- Commercial Project -->
+                    <div class="project-card">
+                        <div class="project-images">
+                            <img src="commercial-01.webp" alt="Commercial Project 1">
+                            <img src="commercial-02.webp" alt="Commercial Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj1_title">Commercial Complex</h3>
+                            <p data-i18n="proj1_desc">Full electrical installation for a new retail center.</p>
+                        </div>
+                    </div>
+                    <!-- Residential Project -->
+                    <div class="project-card">
+                        <div class="project-images">
+                            <img src="residential-01.jpg" alt="Residential Project 1">
+                            <img src="residential-02.jpg" alt="Residential Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj2_title">Residential Dwelling</h3>
+                            <p data-i18n="proj2_desc">High-quality electrical wiring and smart home integration for modern residences.</p>
+                        </div>
+                    </div>
+                    <!-- Office Project -->
+                    <div class="project-card">
+                        <div class="project-images">
+                            <img src="office-01.jpg" alt="Office Project 1">
+                            <img src="office-02.jpg" alt="Office Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj3_title">Modern Office Space</h3>
+                            <p data-i18n="proj3_desc">Energy-efficient LED lighting and network cabling.</p>
+                        </div>
+                    </div>
+                    <!-- Charging Station Project -->
+                    <div class="project-card">
+                        <div class="project-images">
+                            <img src="ChargingStation-01.jpg" alt="Home Charging Station 1">
+                            <img src="ChargingStation-02.webp" alt="Home Charging Station 2">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj4_title">Home Charging Station</h3>
+                            <p data-i18n="proj4_desc">Professional installation of Level 2 EV chargers for homes and multi-unit buildings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="section">
+            <div class="container grid-2">
+                <div class="contact-info">
+                    <h2 data-i18n="contact_title">Get in Touch</h2>
+                    <p class="contact-item">
+                        <span class="icon">📞</span>
+                        <span data-i18n="contact_phone">Phone: (514) 638-3668</span>
+                    </p>
+                    <p class="contact-item">
+                        <span class="icon">✉️</span>
+                        <span data-i18n="contact_email">Email: info@wongelectric.ca</span>
+                    </p>
+                    <p class="contact-item">
+                        <span class="icon">🏠</span>
+                        <span>318-1248 av. de l'Hôtel-de-Ville, Montréal, QC H2X 0B2</span>
+                    </p>
+                    <div class="license-info">
+                        <strong>RBQ: 5867-2353-01</strong>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <!-- Replace action with Formspree URL later -->
+                    <form action="https://formspree.io/f/placeholder" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" data-i18n="form_address">Service Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" data-i18n="form_phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="form_email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="form_desc">Description of work to perform</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary" data-i18n="form_submit">Request Quotation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Wong Electric Inc. / Wong Électrique Inc. / 宏電工程. All rights reserved.</p>
+            <p>RBQ: 5867-2353-01 | Member of CMEQ</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

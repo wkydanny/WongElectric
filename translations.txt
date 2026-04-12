@@ -1,0 +1,100 @@
+nav_welcome_e: Welcome
+nav_welcome_f: Bienvenue
+nav_welcome_c: 歡迎
+nav_about_e: About Us
+nav_about_f: À propos de nous
+nav_about_c: 關於我們
+nav_careers_e: Careers
+nav_careers_f: Carrières
+nav_careers_c: 職位空缺
+nav_projects_e: Projects
+nav_projects_f: Projets
+nav_projects_c: 工程項目
+nav_contact_e: Contact Us
+nav_contact_f: Contactez-nous
+nav_contact_c: 聯絡我們
+
+hero_title_e: Excellence in Electrical Solutions
+hero_title_f: Excellence en Solutions Électriques
+hero_title_c: 卓越的電氣解決方案
+hero_subtitle_e: Licensed Electrical Contractor serving Montreal and surrounding areas. RBQ: 5867-2353-01
+hero_subtitle_f: Entrepreneur électricien licencié desservant Montréal et ses environs. RBQ : 5867-2353-01
+hero_subtitle_c: 服務於蒙特利爾及周邊地區的持牌電氣承包商。RBQ: 5867-2353-01
+
+about_title_e: About Wong Electric Inc.
+about_title_f: À propos de Wong Électrique Inc.
+about_title_c: 關於宏電工程
+about_desc_e: Wong Electric Inc. (宏電工程) is a premier electrical contractor based in Montreal. As a proud member of CMEQ and a holder of RBQ license 5867-2353-01, we specialize in commercial and residential electrical work. Our team is dedicated to providing high-quality design-build projects, new construction services, and 24/7 emergency support.
+about_desc_f: Wong Électrique Inc. (宏電工程) est un entrepreneur électricien de premier plan basé à Montréal. En tant que fier membre de la CMEQ et titulaire de la licence RBQ 5867-2353-01, nous nous spécialisons dans les travaux électriques commerciaux et résidentiels. Notre équipe se consacre à fournir des projets de conception-construction de haute qualité, des services de construction neuve et un soutien d'urgence 24/7.
+about_desc_c: 宏電工程 (Wong Electric Inc.) 是蒙特利爾領先的電氣承包商。作為 CMEQ 的成員和 RBQ 執照 5867-2353-01 的持有者，我們專注於商業和住宅電氣工程。我們的團隊致力於提供高質量的設計建造項目、新建築服務和 24/7 緊急支援。
+
+careers_title_e: Join Our Team
+careers_title_f: Rejoignez notre équipe
+careers_title_c: 加入我們的團隊
+careers_desc_e: We are always looking for talented electricians and apprentices. Check back soon for specific job postings!
+careers_desc_f: Nous sommes toujours à la recherche d'électriciens et d'apprentis talentueux. Revenez bientôt pour les offres d'emploi spécifiques !
+careers_desc_c: 我們一直在尋找有才華的電工和學徒。請稍後查看具體的職位發布！
+
+projects_title_e: Our Work Portfolio
+projects_title_f: Notre Portfolio
+projects_title_c: 工程案例
+projects_desc_e: Showcasing our recent commercial and residential achievements.
+projects_desc_f: Présentation de nos récentes réalisations commerciales et résidentielles.
+projects_desc_c: 展示我們最近的商業和住宅成就。
+
+proj1_title_e: Commercial Complex
+proj1_title_f: Complexe Commercial
+proj1_title_c: 商業綜合體
+proj1_desc_e: Full electrical installation for a new retail center.
+proj1_desc_f: Installation électrique complète pour un nouveau centre commercial.
+proj1_desc_c: 全新的零售中心電氣安裝工程。
+
+proj2_title_e: Residential Dwelling
+proj2_title_f: Habitation Résidentielle
+proj2_title_c: 住宅房屋
+proj2_desc_e: High-quality electrical wiring and smart home integration for modern residences.
+proj2_desc_f: Câblage électrique de haute qualité et intégration de maison intelligente pour résidences modernes.
+proj2_desc_c: 為現代住宅提供高品質的電氣佈線和智能家居集成。
+
+proj3_title_e: Modern Office Space
+proj3_title_f: Espace de Bureau Moderne
+proj3_title_c: 現代辦公空間
+proj3_desc_e: Energy-efficient LED lighting and network cabling.
+proj3_desc_f: Éclairage LED écoénergétique et câblage réseau.
+proj3_desc_c: 節能 LED 照明和網絡佈線。
+
+proj4_title_e: Home Charging Station
+proj4_title_f: Station de recharge à domicile
+proj4_title_c: 家用充電站
+proj4_desc_e: Professional installation of Level 2 EV chargers for homes and multi-unit buildings.
+proj4_desc_f: Installation professionnelle de chargeurs de VE de niveau 2 pour les maisons et les immeubles multi-logements.
+proj4_desc_c: 為家庭和多單元建築提供專業的 2 級電動汽車充電器安裝。
+
+contact_title_e: Get in Touch
+contact_title_f: Contactez-nous
+contact_title_c: 聯絡我們
+contact_phone_e: Phone: (514) 638-3668
+contact_phone_f: Tél : (514) 638-3668
+contact_phone_c: 電話：(514) 638-3668
+contact_email_e: Email: info@wongelectric.ca
+contact_email_f: Courriel : info@wongelectric.ca
+contact_email_c: 電子郵件：info@wongelectric.ca
+
+form_name_e: Full Name
+form_name_f: Nom complet
+form_name_c: 姓名
+form_address_e: Service Address
+form_address_f: Adresse de service
+form_address_c: 服務地址
+form_phone_e: Phone Number
+form_phone_f: Numéro de téléphone
+form_phone_c: 電話號碼
+form_email_e: Email Address
+form_email_f: Adresse courriel
+form_email_c: 電子郵件
+form_desc_e: Description of work to perform
+form_desc_f: Description des travaux à effectuer
+form_desc_c: 工作內容描述
+form_submit_e: Request Quotation
+form_submit_f: Demander un devis
+form_submit_c: 索取報價
