@@ -26,6 +26,8 @@ let translations = {
         proj3_desc: "Energy-efficient LED lighting and network cabling.",
         proj4_title: "Home Charging Station",
         proj4_desc: "Professional installation of Level 2 EV chargers for homes and multi-unit buildings.",
+        proj5_title: "Exterior Lighting",
+        proj5_desc: "Installation of electrical wiring for exterior lighting fixtures, showcasing the professional wiring process and final polished result.",
         contact_title: "Get in Touch",
         contact_phone: "Phone: (514) 638-3668",
         contact_email: "Email: info@wongelectric.ca",
@@ -58,6 +60,8 @@ let translations = {
         proj3_desc: "Éclairage LED écoénergétique et câblage réseau.",
         proj4_title: "Station de recharge à domicile",
         proj4_desc: "Installation professionnelle de chargeurs de VE de niveau 2 pour les maisons et les immeubles multi-logements.",
+        proj5_title: "Éclairage extérieur",
+        proj5_desc: "Installation du câblage électrique pour les luminaires extérieurs, illustrant le processus de câblage professionnel et le résultat final impeccable.",
         contact_title: "Contactez-nous",
         contact_phone: "Tél : (514) 638-3668",
         contact_email: "Courriel : info@wongelectric.ca",
@@ -90,6 +94,8 @@ let translations = {
         proj3_desc: "節能 LED 照明和網絡佈線。",
         proj4_title: "家用充電站",
         proj4_desc: "為家庭和多單元建築提供專業的 2 級電動汽車充電器安裝。",
+        proj5_title: "戶外照明",
+        proj5_desc: "戶外照明燈具的電線安裝工程，展示了專業的佈線過程及最終齊整的完工效果。",
         contact_title: "聯絡我們",
         contact_phone: "電話：(514) 638-3668",
         contact_email: "電子郵件：info@wongelectric.ca",
@@ -208,4 +214,82 @@ window.addEventListener('load', () => {
             }
         });
     }
+});
+
+/**
+ * Lightbox Slider Functionality
+ */
+const project5Images = [
+    "portfolio/20250723/20250723-01.jpeg",
+    "portfolio/20250723/20250723-02.jpeg",
+    "portfolio/20250723/20250723-03.jpeg",
+    "portfolio/20250723/20250723-04.jpeg",
+    "portfolio/20250723/20250723-05.jpeg",
+    "portfolio/20250723/20250723-06.jpeg"
+];
+
+let currentSlideIndex = 0;
+let currentProjectImages = [];
+
+function openLightbox(index) {
+    currentProjectImages = project5Images;
+    currentSlideIndex = index;
+    const lightbox = document.getElementById('portfolio-lightbox');
+    if (!lightbox) return;
+    
+    lightbox.style.display = 'flex';
+    setTimeout(() => {
+        lightbox.classList.add('active');
+    }, 10);
+    
+    showSlide(currentSlideIndex);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('portfolio-lightbox');
+    if (!lightbox) return;
+    
+    lightbox.classList.remove('active');
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+    }, 300);
+    document.body.style.overflow = 'auto';
+}
+
+function changeSlide(n) {
+    showSlide(currentSlideIndex += n);
+}
+
+function showSlide(n) {
+    if (n >= currentProjectImages.length) currentSlideIndex = 0;
+    if (n < 0) currentSlideIndex = currentProjectImages.length - 1;
+    
+    const img = document.getElementById('lightbox-img');
+    const caption = document.getElementById('lightbox-caption');
+    const currentText = document.getElementById('current-slide');
+    const totalText = document.getElementById('total-slides');
+    
+    if (img) img.src = currentProjectImages[currentSlideIndex];
+    if (currentText) currentText.textContent = currentSlideIndex + 1;
+    if (totalText) totalText.textContent = currentProjectImages.length;
+    
+    if (caption) {
+        caption.textContent = translations[currentLang]['proj5_title'] || translations['e']['proj5_title'];
+    }
+}
+
+// Global scope for onclick attributes in HTML
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.changeSlide = changeSlide;
+
+// Keyboard Navigation
+document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('portfolio-lightbox');
+    if (!lightbox || !lightbox.classList.contains('active')) return;
+    
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') changeSlide(-1);
+    if (e.key === 'ArrowRight') changeSlide(1);
 });

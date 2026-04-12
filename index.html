@@ -131,6 +131,17 @@
                             <p data-i18n="proj4_desc">Professional installation of Level 2 EV chargers for homes and multi-unit buildings.</p>
                         </div>
                     </div>
+                    <!-- Exterior Lighting Project -->
+                    <div class="project-card" id="proj5" onclick="openLightbox(0)">
+                        <div class="project-images">
+                            <img src="portfolio/20250723/20250723-02.jpeg" alt="Exterior Lighting - Process">
+                            <img src="portfolio/20250723/20250723-04.jpeg" alt="Exterior Lighting - Detail">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj5_title">Exterior Lighting</h3>
+                            <p data-i18n="proj5_desc">Installation of electrical wiring for exterior lighting fixtures, showcasing the professional wiring process and final illuminated result.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -194,6 +205,18 @@
             <p>RBQ: 5867-2353-01 | Member of CMEQ</p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="portfolio-lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content-container">
+            <img id="lightbox-img" src="" alt="Portfolio Image">
+            <div id="lightbox-caption"></div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">1</span></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
