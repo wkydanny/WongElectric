@@ -105,3 +105,7 @@ proj5_title_c: 戶外照明
 proj5_desc_e: Installation of electrical wiring for exterior lighting fixtures, showcasing the professional wiring process and the final polished result.
 proj5_desc_f: Installation du câblage électrique pour les luminaires extérieurs, illustrant le processus de câblage professionnel et le résultat final impeccable.
 proj5_desc_c: 戶外照明燈具的電線安裝工程，展示了專業的佈線過程及最終齊整的完工效果。
+
+view_project_e: View Project
+view_project_f: Voir le projet
+view_project_c: 查看項目

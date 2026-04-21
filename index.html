@@ -88,10 +88,12 @@
                 <p data-i18n="projects_desc" class="text-white opacity-70">Showcasing our recent commercial and residential achievements.</p>
                 <div class="project-grid">
                     <!-- Commercial Project -->
-                    <div class="project-card">
-                        <div class="project-images">
-                            <img src="commercial-01.webp" alt="Commercial Project 1">
-                            <img src="commercial-02.webp" alt="Commercial Project 2">
+                    <div class="project-card" onclick="openLightbox('commercial')">
+                        <div class="project-image-wrapper">
+                            <img src="achieve-commercial.png" alt="Commercial Project" class="project-img">
+                            <div class="project-overlay">
+                                <span class="view-btn" data-i18n="view_project">View Project</span>
+                            </div>
                         </div>
                         <div class="project-info">
                             <h3 data-i18n="proj1_title">Commercial Complex</h3>
@@ -99,10 +101,12 @@
                         </div>
                     </div>
                     <!-- Residential Project -->
-                    <div class="project-card">
-                        <div class="project-images">
-                            <img src="residential-01.jpg" alt="Residential Project 1">
-                            <img src="residential-02.jpg" alt="Residential Project 2">
+                    <div class="project-card" onclick="openLightbox('residential')">
+                        <div class="project-image-wrapper">
+                            <img src="achieve-residential.png" alt="Residential Project" class="project-img">
+                            <div class="project-overlay">
+                                <span class="view-btn" data-i18n="view_project">View Project</span>
+                            </div>
                         </div>
                         <div class="project-info">
                             <h3 data-i18n="proj2_title">Residential Dwelling</h3>
@@ -110,10 +114,12 @@
                         </div>
                     </div>
                     <!-- Office Project -->
-                    <div class="project-card">
-                        <div class="project-images">
-                            <img src="office-01.jpg" alt="Office Project 1">
-                            <img src="office-02.jpg" alt="Office Project 2">
+                    <div class="project-card" onclick="openLightbox('office')">
+                        <div class="project-image-wrapper">
+                            <img src="achieve-office.png" alt="Office Project" class="project-img">
+                            <div class="project-overlay">
+                                <span class="view-btn" data-i18n="view_project">View Project</span>
+                            </div>
                         </div>
                         <div class="project-info">
                             <h3 data-i18n="proj3_title">Modern Office Space</h3>
@@ -121,10 +127,12 @@
                         </div>
                     </div>
                     <!-- Charging Station Project -->
-                    <div class="project-card">
-                        <div class="project-images">
-                            <img src="ChargingStation-01.jpg" alt="Home Charging Station 1">
-                            <img src="ChargingStation-02.webp" alt="Home Charging Station 2">
+                    <div class="project-card" onclick="openLightbox('charging')">
+                        <div class="project-image-wrapper">
+                            <img src="achieve-charging.png" alt="Home Charging Station" class="project-img">
+                            <div class="project-overlay">
+                                <span class="view-btn" data-i18n="view_project">View Project</span>
+                            </div>
                         </div>
                         <div class="project-info">
                             <h3 data-i18n="proj4_title">Home Charging Station</h3>
@@ -132,14 +140,16 @@
                         </div>
                     </div>
                     <!-- Exterior Lighting Project -->
-                    <div class="project-card" id="proj5" onclick="openLightbox(0)">
-                        <div class="project-images">
-                            <img src="portfolio/20250723/20250723-02.jpeg" alt="Exterior Lighting - Process">
-                            <img src="portfolio/20250723/20250723-04.jpeg" alt="Exterior Lighting - Detail">
+                    <div class="project-card" onclick="openLightbox('exterior')">
+                        <div class="project-image-wrapper">
+                            <img src="achieve-exterior.png" alt="Exterior Lighting" class="project-img">
+                            <div class="project-overlay">
+                                <span class="view-btn" data-i18n="view_project">View Project</span>
+                            </div>
                         </div>
                         <div class="project-info">
                             <h3 data-i18n="proj5_title">Exterior Lighting</h3>
-                            <p data-i18n="proj5_desc">Installation of electrical wiring for exterior lighting fixtures, showcasing the professional wiring process and final illuminated result.</p>
+                            <p data-i18n="proj5_desc">Professional wiring and installation for architectural illumination.</p>
                         </div>
                     </div>
                 </div>
@@ -217,6 +227,9 @@
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
         <div class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">1</span></div>
     </div>
+
+    <!-- Floating CTA -->
+    <a href="#contact" class="floating-cta" data-i18n="nav_contact">Contact Us</a>
 
     <script src="script.js"></script>
 </body>

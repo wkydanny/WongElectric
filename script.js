@@ -36,7 +36,8 @@ let translations = {
         form_phone: "Phone Number",
         form_email: "Email Address",
         form_desc: "Description of work",
-        form_submit: "Request Quotation"
+        form_submit: "Request Quotation",
+        view_project: "View Project"
     },
     f: {
         nav_welcome: "Bienvenue",
@@ -70,7 +71,8 @@ let translations = {
         form_phone: "Numéro de téléphone",
         form_email: "Adresse courriel",
         form_desc: "Description des travaux",
-        form_submit: "Demander un devis"
+        form_submit: "Demander un devis",
+        view_project: "Voir le projet"
     },
     c: {
         nav_welcome: "歡迎",
@@ -104,7 +106,8 @@ let translations = {
         form_phone: "電話號碼",
         form_email: "電子郵件",
         form_desc: "工作內容描述",
-        form_submit: "索取報價"
+        form_submit: "索取報價",
+        view_project: "查看項目"
     }
 };
 
@@ -217,23 +220,46 @@ window.addEventListener('load', () => {
 });
 
 /**
- * Lightbox Slider Functionality
+ * Project Data for Lightbox
  */
-const project5Images = [
-    "portfolio/20250723/20250723-01.jpeg",
-    "portfolio/20250723/20250723-02.jpeg",
-    "portfolio/20250723/20250723-03.jpeg",
-    "portfolio/20250723/20250723-04.jpeg",
-    "portfolio/20250723/20250723-05.jpeg",
-    "portfolio/20250723/20250723-06.jpeg"
-];
+const projectsData = {
+    commercial: [
+        "commercial-01.webp",
+        "commercial-02.webp"
+    ],
+    residential: [
+        "residential-01.jpg",
+        "residential-02.jpg"
+    ],
+    office: [
+        "office-01.jpg",
+        "office-02.jpg"
+    ],
+    charging: [
+        "ChargingStation-01.jpg",
+        "ChargingStation-02.webp"
+    ],
+    exterior: [
+        "portfolio/20250723/20250723-01.jpeg",
+        "portfolio/20250723/20250723-02.jpeg",
+        "portfolio/20250723/20250723-03.jpeg",
+        "portfolio/20250723/20250723-04.jpeg",
+        "portfolio/20250723/20250723-05.jpeg",
+        "portfolio/20250723/20250723-06.jpeg"
+    ]
+};
 
 let currentSlideIndex = 0;
 let currentProjectImages = [];
+let currentProjectId = 'exterior';
 
-function openLightbox(index) {
-    currentProjectImages = project5Images;
+function openLightbox(projectId, index = 0) {
+    if (!projectsData[projectId]) return;
+    
+    currentProjectId = projectId;
+    currentProjectImages = projectsData[projectId];
     currentSlideIndex = index;
+
     const lightbox = document.getElementById('portfolio-lightbox');
     if (!lightbox) return;
     
@@ -275,7 +301,15 @@ function showSlide(n) {
     if (totalText) totalText.textContent = currentProjectImages.length;
     
     if (caption) {
-        caption.textContent = translations[currentLang]['proj5_title'] || translations['e']['proj5_title'];
+        const titleKey = {
+            'commercial': 'proj1_title',
+            'residential': 'proj2_title',
+            'office': 'proj3_title',
+            'charging': 'proj4_title',
+            'exterior': 'proj5_title'
+        }[currentProjectId];
+        
+        caption.textContent = translations[currentLang][titleKey] || translations['e'][titleKey];
     }
 }
 
