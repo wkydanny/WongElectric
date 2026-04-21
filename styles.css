@@ -220,6 +220,7 @@ nav {
     font-size: 5rem;
     color: var(--secondary);
     box-shadow: inset 0 0 40px rgba(0,0,0,0.05);
+    overflow: hidden; /* Prevent scaling overflow */
 }
 
 /* Project Cards */
@@ -551,5 +552,304 @@ footer {
     .close-lightbox {
         top: 10px;
         right: 20px;
+    }
+}
+
+/* --- Name Card Component (nc- prefix to avoid conflicts) --- */
+:root {
+    --nc-blue: #0B203E;
+    --nc-yellow: #F3A81D;
+    --nc-white: #FFFFFF;
+    --nc-grey: #808080;
+    --nc-font-main: 'Montserrat', sans-serif;
+    --nc-font-alt: 'Inter', sans-serif;
+}
+
+.namecard-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transform: scale(0.9);
+    transform-origin: center center;
+}
+
+.nc-card {
+    width: 336px;
+    height: 192px;
+    background-color: var(--nc-grey);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    font-family: var(--nc-font-main);
+    text-align: left;
+}
+
+.nc-front {
+    display: flex;
+}
+
+.nc-left {
+    width: 120px;
+    background-color: var(--nc-grey);
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.nc-logo-main {
+    width: 100%;
+}
+
+.nc-logo-main img {
+    width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.nc-cert-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nc-cmeq-badge { height: 30px; }
+.nc-rbq-badge { height: 30px; }
+
+.nc-right {
+    flex: 1;
+    position: relative;
+    padding: 20px 10px 20px 60px;
+    color: var(--nc-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
+}
+
+.nc-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-color: var(--nc-blue);
+    transform: skewX(-15deg);
+    border-left: 4px solid var(--nc-yellow);
+    z-index: 1;
+}
+
+.nc-contact {
+    position: relative;
+    z-index: 2;
+}
+
+.nc-name {
+    font-size: 14pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    color: var(--nc-white);
+    line-height: 1.2;
+}
+
+.nc-title {
+    color: var(--nc-yellow);
+    font-size: 8pt;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.nc-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.nc-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 7.5pt;
+    font-family: var(--nc-font-alt);
+    color: var(--nc-white);
+}
+
+.nc-item i {
+    color: var(--nc-yellow);
+    width: 12px;
+    text-align: center;
+}
+
+.nc-rbq {
+    font-size: 8pt;
+    font-weight: 700;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 8px;
+    color: var(--nc-white);
+}
+
+.nc-back {
+    background-color: var(--nc-blue);
+    color: var(--nc-white);
+    padding: 15px;
+    width: 336px;
+    height: 192px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--nc-font-main);
+}
+
+.nc-back-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nc-back-main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.nc-qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nc-qr-frame {
+    background-color: var(--nc-white);
+    padding: 5px;
+    border-radius: 6px;
+    border: 3px solid var(--nc-yellow);
+}
+
+.nc-qr-img {
+    width: 75px;
+    height: 75px;
+    display: block;
+}
+
+.nc-qr-url {
+    font-size: 8pt;
+    font-weight: 700;
+}
+
+.nc-divider {
+    width: 1px;
+    height: 80%;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.nc-services {
+    flex: 1;
+}
+
+.nc-slogan {
+    font-size: 11pt;
+    font-weight: 800;
+    color: var(--nc-white);
+    margin: 0;
+}
+
+.nc-sub-slogan {
+    font-size: 7pt;
+    color: var(--nc-yellow);
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.nc-services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nc-service-item {
+    text-align: center;
+}
+
+.nc-service-icon {
+    font-size: 14pt;
+    margin-bottom: 5px;
+}
+
+.nc-service-name {
+    font-size: 5.5pt;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--nc-white);
+}
+
+.nc-footer-slogan {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 8px;
+}
+
+.nc-footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: var(--nc-white);
+}
+
+.nc-footer-check {
+    color: var(--nc-yellow);
+}
+
+.nc-footer-bottom {
+    font-size: 8pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--nc-white);
+}
+
+.nc-highlight {
+    color: var(--nc-yellow);
+}
+
+.nc-top-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 20px;
+    background-color: var(--nc-yellow);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.nc-bottom-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 20px;
+    background-color: var(--nc-yellow);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+@media (max-width: 768px) {
+    .namecard-component {
+        transform: scale(0.7);
     }
 }

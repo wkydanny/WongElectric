@@ -37,7 +37,17 @@ let translations = {
         form_email: "Email Address",
         form_desc: "Description of work",
         form_submit: "Request Quotation",
-        view_project: "View Project"
+        view_project: "View Project",
+        card_owner: "OWNER",
+        card_slogan: "POWERING YOUR PROJECTS",
+        card_sub_slogan: "ELECTRICITY • RENOVATION",
+        card_electrical: "ELECTRICAL SERVICES",
+        card_renovation: "RENOVATION SERVICES",
+        card_installation: "INSTALLATION & REPAIR",
+        card_quality: "QUALITY WORK. TRUSTED SERVICE.",
+        card_peace_part1: "POWERING ",
+        card_peace_part2: "YOUR ",
+        card_peace_part3: "PEACE OF MIND."
     },
     f: {
         nav_welcome: "Bienvenue",
@@ -72,7 +82,17 @@ let translations = {
         form_email: "Adresse courriel",
         form_desc: "Description des travaux",
         form_submit: "Demander un devis",
-        view_project: "Voir le projet"
+        view_project: "Voir le projet",
+        card_owner: "PROPRIÉTAIRE",
+        card_slogan: "PROPULSER VOS PROJETS",
+        card_sub_slogan: "ÉLECTRICITÉ • RÉNOVATION",
+        card_electrical: "SERVICES ÉLECTRIQUES",
+        card_renovation: "SERVICES DE RÉNOVATION",
+        card_installation: "INSTALLATION ET RÉPARATION",
+        card_quality: "TRAVAIL DE QUALITÉ. SERVICE FIABLE.",
+        card_peace_part1: "PROPULSER ",
+        card_peace_part2: "VOTRE ",
+        card_peace_part3: "TRANQUILLITÉ D'ESPRIT."
     },
     c: {
         nav_welcome: "歡迎",
@@ -107,7 +127,17 @@ let translations = {
         form_email: "電子郵件",
         form_desc: "工作內容描述",
         form_submit: "索取報價",
-        view_project: "查看項目"
+        view_project: "查看項目",
+        card_owner: "負責人",
+        card_slogan: "為您的項目提供動力",
+        card_sub_slogan: "電氣 • 裝修",
+        card_electrical: "電氣服務",
+        card_renovation: "裝修服務",
+        card_installation: "安裝與維修",
+        card_quality: "品質保證。誠信服務。",
+        card_peace_part1: "讓您",
+        card_peace_part2: "",
+        card_peace_part3: "安心無憂。"
     }
 };
 

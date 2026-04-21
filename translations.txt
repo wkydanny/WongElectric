@@ -109,3 +109,41 @@ proj5_desc_c: 戶外照明燈具的電線安裝工程，展示了專業的佈線
 view_project_e: View Project
 view_project_f: Voir le projet
 view_project_c: 查看項目
+
+card_owner_e: OWNER
+card_owner_f: PROPRIÉTAIRE
+card_owner_c: 負責人
+
+card_slogan_e: POWERING YOUR PROJECTS
+card_slogan_f: PROPULSER VOS PROJETS
+card_slogan_c: 為您的項目提供動力
+
+card_sub_slogan_e: ELECTRICITY • RENOVATION
+card_sub_slogan_f: ÉLECTRICITÉ • RÉNOVATION
+card_sub_slogan_c: 電氣 • 裝修
+
+card_electrical_e: ELECTRICAL SERVICES
+card_electrical_f: SERVICES ÉLECTRIQUES
+card_electrical_c: 電氣服務
+
+card_renovation_e: RENOVATION SERVICES
+card_renovation_f: SERVICES DE RÉNOVATION
+card_renovation_c: 裝修服務
+
+card_installation_e: INSTALLATION & REPAIR
+card_installation_f: INSTALLATION ET RÉPARATION
+card_installation_c: 安裝與維修
+
+card_quality_e: QUALITY WORK. TRUSTED SERVICE.
+card_quality_f: TRAVAIL DE QUALITÉ. SERVICE FIABLE.
+card_quality_c: 品質保證。誠信服務。
+
+card_peace_part1_e: POWERING 
+card_peace_part1_f: PROPULSER 
+card_peace_part1_c: 讓您
+card_peace_part2_e: YOUR 
+card_peace_part2_f: VOTRE 
+card_peace_part2_c: 
+card_peace_part3_e: PEACE OF MIND.
+card_peace_part3_f: TRANQUILLITÉ D'ESPRIT.
+card_peace_part3_c: 安心無憂。
