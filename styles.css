@@ -572,6 +572,55 @@ footer {
     gap: 15px;
     transform: scale(0.9);
     transform-origin: center center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.namecard-hover-trigger {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.namecard-hover-trigger:hover .namecard-component {
+    transform: scale(0.95); /* 0.9 * 1.05 ≈ 0.945, but let's just use 0.95 */
+}
+
+.nc-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 28, 46, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 10;
+    border-radius: 12px;
+}
+
+.namecard-hover-trigger:hover .nc-overlay {
+    opacity: 1;
+}
+
+.view-nc-btn {
+    background: var(--nc-yellow);
+    color: var(--nc-blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.namecard-hover-trigger:hover .view-nc-btn {
+    transform: translateY(0);
 }
 
 .nc-card {
@@ -852,4 +901,71 @@ footer {
     .namecard-component {
         transform: scale(0.7);
     }
+}
+
+/* --- Name Card Modal --- */
+.namecard-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 28, 46, 0.98);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.namecard-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.nc-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 90vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nc-modal-iframe {
+    width: 600px; /* Base width */
+    height: 800px; /* Base height */
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    transform: scale(1.6); /* Enlarge name card */
+    transform-origin: center center;
+}
+
+.close-nc-modal {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    color: var(--nc-white);
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 4000;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+}
+
+.close-nc-modal:hover {
+    color: var(--nc-yellow);
 }

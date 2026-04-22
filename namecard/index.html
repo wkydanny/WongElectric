@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body><br>
     <div class="card-container">
         <!-- Front Side -->
         <div class="card card-front" id="card-front">
@@ -26,7 +26,7 @@
             <div class="front-right">
                 <div class="contact-info">
                     <h1 class="name">DANNY WONG</h1>
-                    <p class="title">OWNER</p>
+                    <p class="title" data-i18n="card_owner">OWNER</p>
                     <div class="info-items">
                         <div class="info-item">
                             <i class="fas fa-phone-alt"></i>
@@ -44,7 +44,7 @@
                     <p class="rbq-number">RBQ#: 5867-2353-01</p>
                 </div>
             </div>
-        </div>
+        </div><br>
 
         <!-- Back Side -->
         <div class="card card-back" id="card-back">
@@ -59,26 +59,26 @@
                     </div>
                     <div class="vertical-divider"></div>
                     <div class="services-section">
-                        <h2 class="slogan">POWERING YOUR PROJECTS</h2>
-                        <p class="sub-slogan">ELECTRICITY • RENOVATION</p>
+                        <h2 class="slogan" data-i18n="card_slogan">POWERING YOUR PROJECTS</h2>
+                        <p class="sub-slogan" data-i18n="card_sub_slogan">ELECTRICITY • RENOVATION</p>
                         <div class="services-grid">
                             <div class="service-item">
                                 <div class="service-icon">
                                     <i class="fas fa-lightbulb"></i>
                                 </div>
-                                <p class="service-name">ELECTRICAL<br>SERVICES</p>
+                                <p class="service-name" data-i18n="card_electrical">ELECTRICAL<br>SERVICES</p>
                             </div>
                             <div class="service-item">
                                 <div class="service-icon">
                                     <i class="fas fa-house-chimney-window"></i>
                                 </div>
-                                <p class="service-name">RENOVATION<br>SERVICES</p>
+                                <p class="service-name" data-i18n="card_renovation">RENOVATION<br>SERVICES</p>
                             </div>
                             <div class="service-item">
                                 <div class="service-icon">
                                     <i class="fas fa-tools"></i>
                                 </div>
-                                <p class="service-name">INSTALLATION<br>& REPAIR</p>
+                                <p class="service-name" data-i18n="card_installation">INSTALLATION<br>& REPAIR</p>
                             </div>
                         </div>
                     </div>
@@ -87,12 +87,72 @@
                 <div class="footer-slogan">
                     <div class="footer-top">
                         <i class="fas fa-check-circle footer-check"></i>
-                        <span>QUALITY WORK. TRUSTED SERVICE.</span>
+                        <span data-i18n="card_quality">QUALITY WORK. TRUSTED SERVICE.</span>
                     </div>
-                    <p class="footer-bottom">POWERING <span class="highlight">YOUR</span> PEACE OF MIND.</p>
+                    <p class="footer-bottom">
+                        <span data-i18n="card_peace_part1">POWERING </span>
+                        <span class="highlight" data-i18n="card_peace_part2">YOUR </span>
+                        <span data-i18n="card_peace_part3">PEACE OF MIND.</span>
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+    </div><br>
+
+    <script>
+        const translations = {
+            e: {
+                card_owner: "OWNER",
+                card_slogan: "POWERING YOUR PROJECTS",
+                card_sub_slogan: "ELECTRICITY • RENOVATION",
+                card_electrical: "ELECTRICAL<br>SERVICES",
+                card_renovation: "RENOVATION<br>SERVICES",
+                card_installation: "INSTALLATION<br>& REPAIR",
+                card_quality: "QUALITY WORK. TRUSTED SERVICE.",
+                card_peace_part1: "POWERING ",
+                card_peace_part2: "YOUR ",
+                card_peace_part3: "PEACE OF MIND."
+            },
+            f: {
+                card_owner: "PROPRIÉTAIRE",
+                card_slogan: "PROPULSER VOS PROJETS",
+                card_sub_slogan: "ÉLECTRICITÉ • RÉNOVATION",
+                card_electrical: "SERVICES<br>ÉLECTRIQUES",
+                card_renovation: "SERVICES DE<br>RÉNOVATION",
+                card_installation: "INSTALLATION<br>ET RÉPARATION",
+                card_quality: "TRAVAIL DE QUALITÉ. SERVICE FIABLE.",
+                card_peace_part1: "PROPULSER ",
+                card_peace_part2: "VOTRE ",
+                card_peace_part3: "TRANQUILLITÉ D'ESPRIT."
+            },
+            c: {
+                card_owner: "負責人",
+                card_slogan: "為您的項目助力",
+                card_sub_slogan: "電氣工程 • 裝修服務",
+                card_electrical: "電氣服務",
+                card_renovation: "裝修服務",
+                card_installation: "安裝與維修",
+                card_quality: "品質保證。誠信服務。",
+                card_peace_part1: "讓您",
+                card_peace_part2: "",
+                card_peace_part3: "安心無憂。"
+            }
+        };
+
+        function updateLanguage() {
+            const params = new URLSearchParams(window.location.search);
+            const lang = params.get('lang') || 'e';
+            const dict = translations[lang] || translations['e'];
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', updateLanguage);
+    </script>
 </body>
 </html>

@@ -47,7 +47,8 @@ let translations = {
         card_quality: "QUALITY WORK. TRUSTED SERVICE.",
         card_peace_part1: "POWERING ",
         card_peace_part2: "YOUR ",
-        card_peace_part3: "PEACE OF MIND."
+        card_peace_part3: "PEACE OF MIND.",
+        view_namecard: "View Name Card"
     },
     f: {
         nav_welcome: "Bienvenue",
@@ -92,7 +93,8 @@ let translations = {
         card_quality: "TRAVAIL DE QUALITÉ. SERVICE FIABLE.",
         card_peace_part1: "PROPULSER ",
         card_peace_part2: "VOTRE ",
-        card_peace_part3: "TRANQUILLITÉ D'ESPRIT."
+        card_peace_part3: "TRANQUILLITÉ D'ESPRIT.",
+        view_namecard: "Voir la carte"
     },
     c: {
         nav_welcome: "歡迎",
@@ -135,9 +137,10 @@ let translations = {
         card_renovation: "裝修服務",
         card_installation: "安裝與維修",
         card_quality: "品質保證。誠信服務。",
-        card_peace_part1: "讓您",
-        card_peace_part2: "",
-        card_peace_part3: "安心無憂。"
+        card_peace_part1: "讓",
+        card_peace_part2: "您和家人",
+        card_peace_part3: "安心無憂。",
+        view_namecard: "查看名片"
     }
 };
 
@@ -357,3 +360,35 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') changeSlide(-1);
     if (e.key === 'ArrowRight') changeSlide(1);
 });
+
+/**
+ * Name Card Modal Logic
+ */
+function openNameCardModal() {
+    const modal = document.getElementById('namecard-modal');
+    const iframe = modal.querySelector('iframe');
+    if (!modal || !iframe) return;
+    
+    // Set iframe source with language parameter
+    iframe.src = `namecard/index.html?lang=${currentLang}`;
+    
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modal.classList.add('active');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeNameCardModal() {
+    const modal = document.getElementById('namecard-modal');
+    if (!modal) return;
+    
+    modal.classList.remove('active');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+    document.body.style.overflow = 'auto';
+}
+
+window.openNameCardModal = openNameCardModal;
+window.closeNameCardModal = closeNameCardModal;

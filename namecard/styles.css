@@ -32,8 +32,8 @@ body {
 }
 
 .card {
-    width: 336px; /* 3.5in at 96dpi */
-    height: 192px; /* 2in at 96dpi */
+    width: 355px; /* 3.7in at 96dpi */
+    height: 211px; /* 2.2in at 96dpi */
     background-color: var(--grey);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: relative;
@@ -50,7 +50,7 @@ body {
 .front-left {
     width: 120px; /* Narrower to keep logos away from the slash */
     background-color: var(--grey);
-    padding: 10px 5px;
+    padding: 15px 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align left */
@@ -67,6 +67,7 @@ body {
     width: 100%; /* Fit the 100px width */
     max-height: 80px;
     object-fit: contain;
+	padding: 5px 1px;
 }
 
 .certification-logos-vertical {
@@ -78,6 +79,7 @@ body {
 
 .cmeq-logo {
     height: 30px;
+	margin-left: 5px
 }
 
 .rbq-logo {

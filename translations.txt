@@ -140,10 +140,15 @@ card_quality_c: 品質保證。誠信服務。
 
 card_peace_part1_e: POWERING 
 card_peace_part1_f: PROPULSER 
-card_peace_part1_c: 讓您
+card_peace_part1_c: 讓
 card_peace_part2_e: YOUR 
 card_peace_part2_f: VOTRE 
-card_peace_part2_c: 
+card_peace_part2_c: 您和家人
 card_peace_part3_e: PEACE OF MIND.
 card_peace_part3_f: TRANQUILLITÉ D'ESPRIT.
 card_peace_part3_c: 安心無憂。
+
+# Interactive Name Card
+view_namecarde: View Name Card
+view_namecardf: Voir la carte
+view_namecardc: 查看名片
